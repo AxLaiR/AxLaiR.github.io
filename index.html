@@ -1,0 +1,122 @@
+<head>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" xmlns="http://www.w3.org/1999/html">
+    <link rel="icon" type="image/x-icon" href="icone.jpg">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <div class="background-black">
+        <nav class="w3-sidebar w3-animate-left background-black" style="z-index:3;width:185px;display:block" id="mySidebar">
+        <div class="w3-bar-item w3-btn background-black">
+                <a class="white" href="accueil.php">Accueil</a>
+            </div>
+            <br>
+            <div class="w3-bar-item w3-btn background-black">
+                <a class="white" href="mangas.php">Manga</a>
+            </div>
+            <br>    
+        </nav>
+    </div>
+    <div class="w3-main" id="myOverlay" style="background-color:rgb(97, 97, 97); margin-left:185px;margin-top:0;">
+        <button type="button" class="w3-button background-black w3-top w3-left" onclick="sidebar()"><i class="fa fa-bars white"></i></button>
+        <div class="background-black image" style="position: relative;">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSPuVMbr6IKF8SD3jolcDMSS2FsSB4ALtFh-Q&s" class="Logo">
+            <h2 class="white">Axel Clareton</h2>
+        </div>  
+
+        <div class="w3-row-padding">        
+            <div class="w3-half">
+                <figure class="card">
+                    <img src="https://media.licdn.com/dms/image/C5603AQG2J25TW_MNkw/profile-displayphoto-shrink_400_400/0/1558007510501?e=2147483647&v=beta&t=S6PbBQ1mNptUvXCfL0nA3k7N-MbZsJ3V5n7WruNwwmA" class="card_image" alt = "Ma formation">
+                    <figcaption class="card_body2">
+                        <h2 class="card_title" style="color: red">Ma formation</h2>
+                        <p class="class_desc" style="color: red">
+                            Master 1 au CERI
+                        </p>
+                    </figcaption>
+                </figure>
+            </div>
+        
+            <div class="w3-half">
+                <figure class="card">
+                    <img src="https://cmi-2i2a.univ-avignon.fr/wp-content/uploads/2021/11/moi-qui-fait-du-bad-587x1024.jpg" class="card_image" alt="Moi">
+                    <figcaption class="card_body3">
+                        <h2 class="card_title" style="color: gold;">Moi</h2>
+                        <p class="class_desc" style="color: goldenrod;">
+                            Vous souhaitez en apprendre plus sur moi ?
+                            <br>
+                            <a href="moi.html">Suivez ce lien</a>
+                        </p>
+                    </figcaption>
+                </figure>
+            </div>
+        </div>
+    </body>
+    <footer>
+        <div class="background-black">
+            <div class="liens w3-right">
+                <br>
+                <a href="https://www.instagram.com/axel_cla/"><img src="insta.jpg" alt="insta"></a>
+                <!--<a href="https://www.facebook.com/profile.php?id=100014190678930"><img src="fb.png" alt ="facebook"></a>
+                <a href="https://x.com/leplusboo?t=czqPirxF2F--13Z26H7hAw&amp;s=09"><img src="x.png" alt="x"></a>-->
+                <a href="https://github.com/AxLaiR"><img src="gh.jfif" alt = "github"></a>
+            </div>
+            <h2 class="white">Vous souhaitez me contacter ?</h2>
+            <p class="white">Contactez moi par mail à l'adresse : <h2 class="white">axel.clareton@alumni.univ-avignon.fr</h2></p>
+            <p>Ou contactez moi directement via le formulaire si dessous.</p>
+            <div class="contact-form">
+                <form id="contactForm">
+                    <label for="name">Nom:</label>
+                    <input type="text" id="name" name="name" required>
+                    
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                    
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" rows="4" required></textarea>
+                    
+                    <button type="submit">Envoyer un message</button>
+                </form>
+                <div id="result"></div>
+            </div>            
+        </div>
+    </div>
+</footer>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+<script>
+    var mySidebar = document.getElementById("mySidebar");
+
+    var overlayBg = document.getElementById("myOverlay");
+
+    function sidebar() {
+        if (mySidebar.style.display === 'block') {
+            mySidebar.style.display = 'none';
+            overlayBg.style.marginLeft = "0px";
+        } else {
+            mySidebar.style.display = 'block';
+            overlayBg.style.marginLeft = "185px";
+        }
+    }
+    
+    document.getElementById('contactForm').addEventListener('submit', function(event) {
+        event.preventDefault();
+        
+        const name = document.getElementById('name').value;
+        const email = document.getElementById('email').value;
+        const message = document.getElementById('message').value;
+        
+        axios.post('https://your-server-endpoint.com/send-email', {
+            name: name,
+            email: email,
+            message: message
+        })
+        .then(function (response) {
+            document.getElementById('result').innerText = 'Votre message a été envoyé avec succès!';
+        })
+        .catch(function (error) {
+            document.getElementById('result').innerText = 'Une erreur est survenue. Veuillez réessayer plus tard.';
+        });
+    });
+
+</script>
