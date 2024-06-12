@@ -66,18 +66,18 @@
             <p>Ou contactez moi directement via le formulaire si dessous.</p>
             <div class="contact-form">
                 <form id="contactForm">
-                    <label for="name">Nom:</label>
+                    <label class="white" for="name">Nom:</label>
                     <input type="text" id="name" name="name" required>
                     
-                    <label for="email">Email:</label>
+                    <label class="white" for="email">Email:</label>
                     <input type="email" id="email" name="email" required>
                     
-                    <label for="message">Message:</label>
+                    <label class="white" for="message">Message:</label>
                     <textarea id="message" name="message" rows="4" required></textarea>
                     
                     <button type="submit">Envoyer un message</button>
                 </form>
-                <div id="result"></div>
+                <div class="white" id="result"></div>
             </div>            
         </div>
     </div>
@@ -106,7 +106,7 @@
         const email = document.getElementById('email').value;
         const message = document.getElementById('message').value;
         
-        axios.post('https://your-server-endpoint.com/send-email', {
+        axios.post('https://axlair.github.io/message.php', {
             name: name,
             email: email,
             message: message
