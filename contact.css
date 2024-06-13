@@ -6,6 +6,11 @@ body {
     padding: 0;
 }
 
+.w3-btn{
+    background-color: #444;
+    margin-top: 10px;
+    margin-left: 10px;
+}
 .w3-center {
     margin-top: 50px;
 }
