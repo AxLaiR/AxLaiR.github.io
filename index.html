@@ -8,18 +8,22 @@
     <div class="background-black">
         <nav class="w3-sidebar w3-animate-left background-black" style="z-index:3;width:185px;display:block" id="mySidebar">
         <div class="w3-bar-item w3-btn background-black">
-                <a class="white" href="accueil.php">Accueil</a>
+                <a class="white" href="">Accueil</a>
             </div>
             <br>
             <div class="w3-bar-item w3-btn background-black">
-                <a class="white" href="mangas.php">Manga</a>
+                <a class="white" href="">Moi</a>
+            </div>
+            <br>  
+            <div class="w3-bar-item w3-btn background-black">
+                <a class="white" href="">Mon parcours</a>
             </div>
             <br>    
         </nav>
     </div>
-    <div class="w3-main" id="myOverlay" style="background-color:rgb(97, 97, 97); margin-left:185px;margin-top:0;">
+    <div class="w3-main myOverlay" id="myOverlay">
         <button type="button" class="w3-button background-black w3-top w3-left" onclick="sidebar()"><i class="fa fa-bars white"></i></button>
-        <div class="background-black image" style="position: relative;">
+        <div class="roundedbottomrightcorner background-black image" style="position: relative;">
             <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSPuVMbr6IKF8SD3jolcDMSS2FsSB4ALtFh-Q&s" class="Logo">
             <h2 class="white">Axel Clareton</h2>
         </div>  
@@ -54,14 +58,7 @@
     </body>
     <footer>
         <div class="background-black">
-            <div class="liens w3-right">
-                <br>
-                <a href="https://www.instagram.com/axel_cla/"><img src="insta.jpg" alt="insta"></a>
-                <!--<a href="https://www.facebook.com/profile.php?id=100014190678930"><img src="fb.png" alt ="facebook"></a>
-                <a href="https://x.com/leplusboo?t=czqPirxF2F--13Z26H7hAw&amp;s=09"><img src="x.png" alt="x"></a>-->
-                <a href="https://github.com/AxLaiR"><img src="gh.jfif" alt = "github"></a>
-            </div>
-            <div class="white">
+            <div class="white w3-center">
                 <h2>Vous souhaitez me contacter ?</h2>
                 <p>Contactez moi par mail à l'adresse : <h2>axel.clareton@alumni.univ-avignon.fr</h2></p>
                 <p>Ou contactez moi directement via le formulaire si dessous.</p>
@@ -80,12 +77,21 @@
                     <button type="submit">Envoyer un message</button>
                 </form>
                 <div class="white" id="result"></div>
-            </div>            
+            </div>  
+            <div class="liens">
+                <a href="https://www.instagram.com/axel_cla/"><img src="https://static.vecteezy.com/system/resources/previews/024/170/864/original/instagram-icon-logo-symbol-free-png.png" alt="insta"></a>
+                <a href="https://github.com/AxLaiR"><img src="https://www.mirait-x.co.jp/images/temi/005.jpg" alt = "github"></a>
+            </div>        
         </div>
     </div>
 </footer>
 </div>
-<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/emailjs-com@2.6.4/dist/email.min.js"></script>
+<script>
+   (function(){
+      emailjs.init("JX337bHpUMUTf5xs2");
+   })();
+</script>
 <script>
     var mySidebar = document.getElementById("mySidebar");
 
@@ -103,21 +109,24 @@
     
     document.getElementById('contactForm').addEventListener('submit', function(event) {
         event.preventDefault();
-        
+
         const name = document.getElementById('name').value;
         const email = document.getElementById('email').value;
         const message = document.getElementById('message').value;
-        
-        axios.post('https://axlair.github.io/message.php', {
-            name: name,
+
+        const templateParams = {
+            to_name: 'Axel',
+            from_name: name,
             email: email,
             message: message
-        })
-        .then(function (response) {
-            document.getElementById('result').innerText = 'Votre message a été envoyé avec succès!';
-        })
-        .catch(function (error) {
-            document.getElementById('result').innerText = 'Une erreur est survenue. Veuillez réessayer plus tard.';
-        });
+        };
+
+        emailjs.send('service_kwld1wb', 'template_yhsf5dr', templateParams)
+            .then(function(response) {
+                document.getElementById('result').innerText = 'Votre message a été envoyé avec succès!';
+            }, function(error) {
+                document.getElementById('result').innerText = 'Une erreur est survenue. Veuillez réessayer plus tard.';
+            });
     });
+
 </script>

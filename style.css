@@ -199,6 +199,7 @@
   border: 1px solid white;
   border-radius: 5px;
 }
+
 .contact-form input, .contact-form textarea {
   width: 100%;
   padding: 10px;
@@ -206,6 +207,7 @@
   border: 1px solid white;
   border-radius: 5px;
 }
+
 .contact-form button {
   padding: 10px 20px;
   border: 2px solid;
@@ -213,4 +215,14 @@
   color: white;
   border-radius: 15px;
   cursor: pointer;
+}
+
+.myOverlay{
+  background-color:rgb(97, 97, 97); 
+  margin-left:185px;
+  margin-top:0;
+}
+
+.roundedbottomrightcorner{
+  border-radius:0px 0px 50px 0px;
 }
