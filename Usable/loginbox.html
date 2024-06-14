@@ -1,0 +1,80 @@
+<button class="w3-theme w3-btn" onclick="modal_login()"><strong class="violet">Login</strong></button><br>
+
+<div class="login-box w3-hide" id="register">
+    <button onclick="modal_register()" class="x w3-theme w3-btn w3-right">❌</button>
+    <h2>Register</h2>
+    <form name="connect" method="post">
+        <div class="user-box">
+            <input type="text" name="username" required="">
+            <label>Username</label>
+                    </div>
+        <div class="user-box">
+            <input type="password" name="password" required="">
+            <label>Password</label>
+        </div>
+        <input hidden="hidden" type="hidden" name="formReg">
+        <div class="login-button">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <input type="submit" value="Register">
+        </div>
+    </form>
+</div>
+
+<div class="login-box w3-hide" id="login">
+    <button onclick="modal_login()" class="x w3-theme w3-btn w3-right">❌</button>
+    <h2>Login</h2>
+    <form name="connect" method="post">
+        <div class="user-box">
+            <input type="text" name="username" required="">
+            <label>Username</label>
+                    </div>
+        <div class="user-box">
+            <input type="password" name="password" required="">
+            <label>Password</label>
+                    </div>
+        <input hidden="hidden" type="hidden" name="formLog">
+        <div class="login-button">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <input type="submit" value="Login">
+        </div>
+        <br>
+        <br>
+        <div class="violet" style="font-family: 'Brush Script MT', cursive; font-size: 23px; text-align: center"> Toujours pas compte ? </div>
+        <br>
+        <div class="violet" style="font-family: 'Brush Script MT', cursive; font-size: 23px; text-align: center"> Enregistrez vous </div>
+        <div class="login-button">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <button onclick="camarche(); teststpfonctionne();" style="font-family: 'Brush Script MT', cursive" class="violet w3-btn">Register</button>
+        </div>
+    </form>
+</div>
+
+<script>
+    function modal_login() {
+            console.log('Bouton cliqué');
+            let formul = document.getElementById("login");
+            if (formul.classList.contains("w3-hide")) {
+                formul.classList.remove("w3-hide");
+            } else {
+                formul.classList.add("w3-hide");
+            }
+        }
+        function modal_register() {
+            console.log('Bouton cliqué');
+            let formul = document.getElementById("register");
+            if (formul.classList.contains("w3-hide")) {
+                formul.classList.remove("w3-hide");
+            } else {
+                formul.classList.add("w3-hide");
+            }
+        }
+</script>
