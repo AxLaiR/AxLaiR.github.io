@@ -201,6 +201,33 @@ body {
   }
 
   .card {
-    width: 95%;
+    width: 100%;
+    max-width: 95%;
+  }
+
+  .card_body2,
+  .card_body3 {
+    position: static;
+    transform: none;
+    padding: 15px;
+    text-align: left;
+  }
+
+  .card_image {
+    height: 200px;
+  }
+
+  .card:hover .card_image {
+    filter: none;
+  }
+
+  .card_body2 p,
+  .card_body3 p,
+  .class_desc {
+    opacity: 1 !important;
+  }
+
+  .card::before {
+    display: none;
   }
 }
