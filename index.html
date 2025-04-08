@@ -11,7 +11,7 @@
 </head>
 <body>
 
-  <nav class="w3-sidebar w3-animate-left background-black" style="z-index:3;width:220px;" id="mySidebar">
+  <nav class="w3-sidebar w3-animate-left background-black" style="z-index:3;width:220px;display: none;" id="mySidebar">
     <div class="w3-bar-item w3-btn">
       <a class="white" href="#">Mon parcours</a>
     </div>
@@ -95,6 +95,8 @@
         overlayBg.style.marginLeft = "220px";
       }
     }
+
+    mySidebar.style.display = 'none'; // Hide sidebar on load
   </script>
 </body>
 </html>
