@@ -1,100 +1,100 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Axel Clareton</title>
-    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-    <link rel="icon" type="image/x-icon" href="icone.jpg">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Axel Clareton</title>
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/x-icon" href="/Assets/Logo.png">
 </head>
 <body>
-    <div class="background-black">
-        <nav class="w3-sidebar w3-animate-left background-black" style="z-index:3;width:185px;display:block" id="mySidebar">
-            <div class="w3-bar-item w3-btn background-black">
-                <a class="white" href="#">Mon parcours</a>
-            </div>
 
-            <br>
-            
-            <div class="w3-bar-item w3-btn background-black">
-                <a class="white" href="moi.html">Informations sur moi</a>
-            </div>
+  <nav class="w3-sidebar w3-animate-left background-black" style="z-index:3;width:220px;" id="mySidebar">
+    <div class="w3-bar-item w3-btn">
+      <a class="white" href="#">Mon parcours</a>
+    </div>
+    <div class="w3-bar-item w3-btn">
+      <a class="white" href="moi.html">Informations sur moi</a>
+    </div>
+    <div class="w3-bar-item w3-btn">
+      <a class="white" href="contact.html">Me contacter</a>
+    </div>
+    <div class="w3-bar-item w3-btn">
+      <a class="white" href="https://audreytendil.com" target="_blank">
+        audreytendil.com<br>
+        <span style="font-size: 13px; color: #bbb;">(site réalisé par moi)</span>
+      </a>
+    </div>
+  </nav>
 
-            <br>
-            
-            <div class="w3-bar-item w3-btn background-black">
-                <a class="white" href="contact.html">Me contacter</a>
-            </div>
+  <div class="w3-main myOverlay" id="myOverlay">
+    <button type="button" class="w3-button background-black w3-top w3-left" onclick="sidebar()">
+      <i class="fa fa-bars white"></i>
+    </button>
 
-            <div class="w3-bar-item w3-btn background-black">
-                <a class="white" href="https://audreytendil.com">audreytendil.com (fait par moi)</a>
-            </div>
-        </nav>
+    <div class="roundedBottomRightCorner background-black image" style="position: relative;">
+      <img src="Assets/Logo.png" class="Logo" alt="Logo">
+      <h2 class="white">Axel Clareton</h2>
     </div>
 
-    <div class="w3-main myOverlay" id="myOverlay">
-        <button type="button" class="w3-button background-black w3-top w3-left" onclick="sidebar()">
-            <i class="fa fa-bars white"></i>
-        </button>
-        <div class="roundedBottomRightCorner background-black image" style="position: relative;">
-            <img src="Assets/Logo.png" class="Logo" alt="Logo">
-            <h2 class="white">Axel Clareton</h2>
-        </div>  
+    <div class="w3-row-padding">
+      <div class="w3-half">
+        <br>
+        <figure class="card w3-right">
+          <img src="https://media.licdn.com/dms/image/C5603AQG2J25TW_MNkw/profile-displayphoto-shrink_400_400/0/1558007510501?e=2147483647&v=beta&t=S6PbBQ1mNptUvXCfL0nA3k7N-MbZsJ3V5n7WruNwwmA" class="card_image" alt="Ma formation">
+          <figcaption class="card_body2">
+            <h2 class="card_title">Ma formation</h2>
+            <p class="class_desc">Actuellement, je poursuis un Master 1 en Ingénierie du Logiciel de la Société Numérique (ILSEN) au CERI.<br>Cette formation me permet de développer des compétences avancées en développement logiciel et en technologies numériques.</p>
+          </figcaption>
+        </figure>
+      </div>
 
-        <div class="w3-row-padding">   
-            <div class="w3-half">
-                <br>     
-                <figure class="card w3-right">
-                    <img src="https://media.licdn.com/dms/image/C5603AQG2J25TW_MNkw/profile-displayphoto-shrink_400_400/0/1558007510501?e=2147483647&v=beta&t=S6PbBQ1mNptUvXCfL0nA3k7N-MbZsJ3V5n7WruNwwmA" class="card_image" alt="Ma formation">
-                    <figcaption class="card_body2">
-                        <h2 class="card_title" style="color: #979797">Ma formation</h2>
-                        <p class="class_desc" style="color: #979797">Actuellement, je poursuis un Master 1 en Ingénierie du Logiciel de la Société Numérique (ILSEN) au CERI. <br> Cette formation me permet de développer des compétences avancées en développement logiciel et en technologies numériques.</p>
-                    </figcaption>
-                </figure>
-            </div>
-        
-            <div class="w3-half">
-                <br>
-                <figure class="card w3-left">
-                    <img src="https://cmi-2i2a.univ-avignon.fr/wp-content/uploads/2021/11/moi-qui-fait-du-bad-587x1024.jpg" class="card_image" alt="Moi">
-                    <figcaption class="card_body3">
-                        <h2 class="card_title" style="color: #979797;">Informations sur moi</h2>
-                        <p class="class_desc" style="color: #979797;">
-                            Envie d'en savoir plus sur moi ? <br> Je suis passionné par le développement logiciel et les nouvelles technologies. En dehors de mes études, j'aime pratiquer des activités sportives comme le badminton.
-                            <br>
-                            <a href="moi.html">Découvrez plus ici</a>
-                        </p>
-                    </figcaption>
-                </figure>
-            </div>
+      <div class="w3-half">
+        <br>
+        <figure class="card w3-left">
+          <img src="https://cmi-2i2a.univ-avignon.fr/wp-content/uploads/2021/11/moi-qui-fait-du-bad-587x1024.jpg" class="card_image" alt="Moi">
+          <figcaption class="card_body3">
+            <h2 class="card_title">Informations sur moi</h2>
+            <p class="class_desc">
+              Envie d'en savoir plus sur moi ? <br>
+              Je suis passionné par le développement logiciel et les nouvelles technologies.<br>
+              En dehors de mes études, j'aime pratiquer des activités sportives comme le badminton.<br>
+              <a href="moi.html">Découvrez plus ici</a>
+            </p>
+          </figcaption>
+        </figure>
+      </div>
+    </div>
+
+    <footer>
+      <div class="background-black roundedTopRightCorner">
+        <div class="liens">
+          <a href="https://www.instagram.com/axel_cla/" target="_blank">
+            <img src="https://static.vecteezy.com/system/resources/previews/024/170/864/original/instagram-icon-logo-symbol-free-png.png" alt="Instagram">
+          </a>
+          <a href="https://github.com/AxLaiR" target="_blank">
+            <img src="https://www.mirait-x.co.jp/images/temi/005.jpg" alt="GitHub">
+          </a>
         </div>
-    
+      </div>
+    </footer>
+  </div>
 
-        <footer>
-            <div class="background-black roundedTopRightCorner">
-                <div class="liens">
-                    <a href="https://www.instagram.com/axel_cla/"><img src="https://static.vecteezy.com/system/resources/previews/024/170/864/original/instagram-icon-logo-symbol-free-png.png" alt="Instagram"></a>
-                    <a href="https://github.com/AxLaiR"><img src="https://www.mirait-x.co.jp/images/temi/005.jpg" alt="GitHub"></a>
-                </div>        
-            </div>
-        </footer>
-    </div>
+  <script>
+    var mySidebar = document.getElementById("mySidebar");
+    var overlayBg = document.getElementById("myOverlay");
 
-    <script>
-        var mySidebar = document.getElementById("mySidebar");
-        var overlayBg = document.getElementById("myOverlay");
-
-        function sidebar() {
-            if (mySidebar.style.display === 'block') {
-                mySidebar.style.display = 'none';
-                overlayBg.style.marginLeft = "0px";
-            } else {
-                mySidebar.style.display = 'block';
-                overlayBg.style.marginLeft = "185px";
-            }
-        }
-    </script>
+    function sidebar() {
+      if (mySidebar.style.display === 'block') {
+        mySidebar.style.display = 'none';
+        overlayBg.style.marginLeft = "0px";
+      } else {
+        mySidebar.style.display = 'block';
+        overlayBg.style.marginLeft = "220px";
+      }
+    }
+  </script>
 </body>
 </html>
