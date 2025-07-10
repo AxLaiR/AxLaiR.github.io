@@ -185,6 +185,11 @@ body {
   flex-wrap: wrap;
 }
 
+.container {
+  text-align: center;
+  padding: 2rem;
+}
+
 h1 {
   color: white;
   font-size: 3rem;
@@ -225,7 +230,7 @@ h1 {
     margin-left: 0 !important;
   }
 
-  .h1 {
+  h1 {
     font-size: 2rem;
   }
   
