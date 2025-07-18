@@ -1,123 +1,405 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Axel Clareton</title>
-  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <link rel="stylesheet" href="style.css">
-  <link rel="icon" type="image/x-icon" href="/Assets/Logo.png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Axel Clareton - Développeur Full Stack</title>
+    <meta name="description" content="Portfolio d'Axel Clareton, étudiant en Master ILSEN, passionné par le développement web. Découvrez mes projets et compétences.">
+    <link rel="stylesheet" href="style.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-  <nav class="w3-sidebar w3-animate-left background-black" style="z-index:3;width:220px;display: none;" id="mySidebar">
-    <div class="w3-bar-item w3-btn">
-      <a class="white" href="#">Mon parcours</a>
-    </div>
-    <div class="w3-bar-item w3-btn">
-      <a class="white" href="moi.html">Informations sur moi</a>
-    </div>
-    <div class="w3-bar-item w3-btn">
-      <a class="white" href="contact.html">Me contacter</a>
-    </div>
-    <div class="w3-bar-item w3-btn">
-      <a class="white" href="https://audreytendil.com" target="_blank">
-        audreytendil.com<br>
-        <span style="font-size: 13px; color: #bbb;">(site réalisé par moi)</span>
-      </a>
-    </div>
-  </nav>
-
-  <div class="w3-main myOverlay" id="myOverlay">
-    <button type="button" class="w3-button background-black w3-top w3-left" onclick="sidebar()">
-      <i class="fa fa-bars white"></i>
-    </button>
-
-  <div class="roundedBottomRightCorner background-black image" style="position: relative;">
-    <img src="Assets/Logo.png" class="Logo" alt="Logo">
-    <h2 class="white">Axel Clareton</h2>
-  </div>
-    
-  <div class="container">
-    <h1>🔜 Site en cours d'actualisation 🔜</h1>
-    <p class="subtitle">Nouveau portfolio en préparation...</p>
-    <div class="loader"></div>
-  </div>
-  <!---
-
-    <div class="w3-row-padding">
-      <div class="w3-half">
-        <br>
-        <figure class="card w3-right">
-          <img src="https://media.licdn.com/dms/image/C5603AQG2J25TW_MNkw/profile-displayphoto-shrink_400_400/0/1558007510501?e=2147483647&v=beta&t=S6PbBQ1mNptUvXCfL0nA3k7N-MbZsJ3V5n7WruNwwmA" class="card_image" alt="Ma formation">
-          <figcaption class="card_body2">
-            <h2 class="card_title">Ma formation</h2>
-            <p class="class_desc">Actuellement, je poursuis un Master 1 en Ingénierie du Logiciel de la Société Numérique (ILSEN) au CERI.<br>Cette formation me permet de développer des compétences avancées en développement logiciel et en technologies numériques.</p>
-          </figcaption>
-        </figure>
-      </div>
-
-      <div class="w3-half">
-        <br>
-        <figure class="card w3-left">
-          <img src="https://cmi-2i2a.univ-avignon.fr/wp-content/uploads/2021/11/moi-qui-fait-du-bad-587x1024.jpg" class="card_image" alt="Moi">
-          <figcaption class="card_body3">
-            <h2 class="card_title">Informations sur moi</h2>
-            <p class="class_desc">
-              Envie d'en savoir plus sur moi ? <br>
-              Je suis passionné par le développement logiciel et les nouvelles technologies.<br>
-              En dehors de mes études, j'aime pratiquer des activités sportives comme le badminton.<br>
-              <a href="moi.html">Découvrez plus ici</a>
-            </p>
-          </figcaption>
-        </figure>
-      </div>
-    </div>
-    -->
-
-    <footer>
-      <div class="background-black roundedTopRightCorner">
-        <div class="liens">
-          <a href="https://github.com/AxelClareton" target="_blank">
-            <img src="https://www.mirait-x.co.jp/images/temi/005.jpg" alt="GitHubAxel">
-          </a>
-          <a href="https://www.instagram.com/axel_cla/" target="_blank">
-            <img src="https://static.vecteezy.com/system/resources/previews/024/170/864/original/instagram-icon-logo-symbol-free-png.png" alt="Instagram">
-          </a>
-          <a href="https://github.com/AxLaiR" target="_blank">
-            <img src="https://www.mirait-x.co.jp/images/temi/005.jpg" alt="GitHubAxLaiR">
-          </a>
+    <!-- Navigation -->
+    <nav id="navbar">
+        <div class="nav-container">
+            <a href="#home" class="logo">
+                <span class="logo-text">AC</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="#home">Accueil</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#about">À propos</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <button class="mobile-menu-toggle" id="mobile-menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
         </div>
-      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-background">
+            <div class="floating-shapes">
+                <div class="shape shape-1"></div>
+                <div class="shape shape-2"></div>
+                <div class="shape shape-3"></div>
+                <div class="shape shape-4"></div>
+                <div class="shape shape-5"></div>
+            </div>
+        </div>
+        <div class="hero-content">
+            <div class="hero-badge">
+                <i class="fas fa-code"></i>
+                <span>Développeur Full Stack</span>
+            </div>
+            <h1 class="hero-title">
+                Salut, je suis <br><span class="highlight">Axel Clareton</span>
+            </h1>
+            <p class="hero-subtitle">
+                Étudiant en Master ILSEN passionné par le développement web. 
+                Je crée des expériences numériques exceptionnelles avec du code propre et des designs innovants.
+            </p>
+            <div class="cta-buttons">
+                <a href="#portfolio" class="btn btn-primary">
+                    <i class="fas fa-rocket"></i>
+                    <span>Voir mes projets</span>
+                </a>
+                <a href="#contact" class="btn btn-secondary">
+                    <i class="fas fa-paper-plane"></i>
+                    <span>Me contacter</span>
+                </a>
+            </div>
+            <div class="scroll-indicator">
+                <div class="scroll-line"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section class="portfolio" id="portfolio">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Mes Réalisations</h2>
+                <p class="section-subtitle">Des projets qui reflètent ma passion pour le code</p>
+            </div>
+            
+            <div class="portfolio-grid">
+                <!-- Projet 1 -->
+                <div class="project-card featured">
+                    <div class="project-image">
+                        <div class="project-overlay">
+                            <div class="project-icon">
+                                <i class="fas fa-heart"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-header">
+                            <h3 class="project-title">audreytendil.com</h3>
+                            <span class="project-badge">Site Vitrine</span>
+                        </div>
+                        <p class="project-description">
+                            Site vitrine élégant créé pour présenter le travail artistique d'Audrey Tendil. 
+                            Interface moderne avec galerie et animations fluides.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">HTML5</span>
+                            <span class="tech-tag">CSS3</span>
+                            <span class="tech-tag">JavaScript</span>
+                            <span class="tech-tag">Responsive</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://audreytendil.com" target="_blank" class="project-link primary">
+                                <i class="fas fa-external-link-alt"></i>
+                                <span>Voir le site</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Projet 2 -->
+                <div class="project-card">
+                    <div class="project-image">
+                        <div class="project-overlay">
+                            <div class="project-icon">
+                                <i class="fas fa-graduation-cap"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-header">
+                            <h3 class="project-title">Projets Académiques</h3>
+                            <span class="project-badge">Formation</span>
+                        </div>
+                        <p class="project-description">
+                            Collection de projets développés pendant ma formation ILSEN. 
+                            Applications web modernes, APIs REST et solutions full-stack.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Java</span>
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">Angular</span>
+                            <span class="tech-tag">SQL</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/AxelClareton" target="_blank" class="project-link">
+                                <i class="fab fa-github"></i>
+                                <span>GitHub</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Projet 3 -->
+                <div class="project-card">
+                    <div class="project-image">
+                        <div class="project-overlay">
+                            <div class="project-icon">
+                                <i class="fas fa-lightbulb"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-header">
+                            <h3 class="project-title">Projets Personnels</h3>
+                            <span class="project-badge">Plaisir</span>
+                        </div>
+                        <p class="project-description">
+                            Projets expérimentaux pour explorer toutes les technologies qui me passent sous la main. 
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Angular</span>
+                            <span class="tech-tag">PHP</span>
+                            <span class="tech-tag">SQL</span>
+                            <span class="tech-tag">Python</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/AxLaiR" target="_blank" class="project-link">
+                                <i class="fab fa-github"></i>
+                                <span>GitHub</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-image">
+                    <div class="image-container">
+                        <div class="rotating-border"></div>
+                        <div class="image-bg"></div>
+                    </div>
+                </div>
+                <div class="about-text">
+                    <h2 class="section-title">À Propos de Moi</h2>
+                    <p class="intro-text">
+                        Étudiant en Master 2 ILSEN au CERI à la rentrée, je suis passionné par le web, mon but est de créer des expériences utilisateur fluides et engageantes avec un visuel attrayant.
+                    </p>
+                    <p>
+                        Ma philosophie ? Allier créativité et technique pour donner vie à des projets. 
+                        J'aime apprendre, expérimenter et partager mes découvertes.
+                    </p>
+                    
+                    <div class="skills-section">
+                        <h3>Mes Compétences</h3>
+                        <div class="skills-grid">
+                            <div class="skill-item">
+                                <div class="skill-icon">
+                                    <i class="fab fa-html5"></i>
+                                </div>
+                                <div class="skill-info">
+                                    <h4>Frontend</h4>
+                                    <p>HTML5, CSS3, JavaScript</p>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-icon">
+                                    <i class="fas fa-server"></i>
+                                </div>
+                                <div class="skill-info">
+                                    <h4>Backend</h4>
+                                    <p>PHP, Python, Java</p>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-icon">
+                                    <i class="fas fa-database"></i>
+                                </div>
+                                <div class="skill-info">
+                                    <h4>Base de données</h4>
+                                    <p>MySQL, PostgreSQL, MongoDB</p>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-icon">
+                                    <i class="fab fa-git-alt"></i>
+                                </div>
+                                <div class="skill-info">
+                                    <h4>Outils</h4>
+                                    <p>Git, Docker, VS Code</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="about.html" class="btn btn-secondary" style="margin-top: 2rem;">
+                        En savoir plus sur moi
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Travaillons Ensemble</h2>
+                <p class="section-subtitle">Une idée ? Un projet ? Parlons-en !</p>
+            </div>
+            
+            <div class="contact-content">
+                <div class="contact-info">
+                    <a href="mailto:clareton.axel@sfr.fr">
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <div>
+                                <h4>Email</h4>
+                                <p>clareton.axel@sfr.fr</p>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="https://www.linkedin.com/in/axel-clareton-1ab468303" target="_blank">
+                        <div class="contact-item">
+                            <i class="fab fa-linkedin"></i>
+                            <div>
+                                <h4>LinkedIn</h4>
+                                <p>linkedin.com/in/axel-clareton-1ab468303</p>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="https://github.com/AxelClareton" target="_blank">
+                        <div class="contact-item">
+                            <i class="fab fa-github"></i>
+                            <div>
+                                <h4>GitHub</h4>
+                                <p>github.com/AxelClareton</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                
+                <div class="contact-cta">
+                    <div class="cta-content">
+                        <h3>Prêt pour votre prochain projet ?</h3>
+                        <p>Que ce soit pour un site web, une application ou des conseils techniques, je suis là pour vous aider.</p>
+                        <a href="contact.html" class="btn btn-primary">
+                            <i class="fas fa-paper-plane"></i>
+                            <span>Envoyez-moi un message</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <h4>Axel Clareton</h4>
+                    <p>Développeur Full Stack passionné</p>
+                </div>
+                <div class="footer-links">
+                    <a href="#home">Accueil</a>
+                    <a href="#portfolio">Portfolio</a>
+                    <a href="#about">À propos</a>
+                    <a href="#contact">Contact</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Axel Clareton. Tous droits réservés.</p>
+            </div>
+        </div>
     </footer>
-  </div>
-  <!-- Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-JX571F65ZJ"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-JX571F65ZJ');
-  </script>
 
-  <!-- Sidebar logic -->
-  <script>
-    var mySidebar = document.getElementById("mySidebar");
-    var overlayBg = document.getElementById("myOverlay");
+    <script>
+        // Navigation mobile
+        const mobileMenu = document.getElementById('mobile-menu');
+        const navLinks = document.querySelector('.nav-links');
 
-    function sidebar() {
-      if (mySidebar.style.display === 'block') {
-        mySidebar.style.display = 'none';
-        overlayBg.style.marginLeft = "0px";
-      } else {
-        mySidebar.style.display = 'block';
-        overlayBg.style.marginLeft = "220px";
-      }
-    }
+        mobileMenu.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            mobileMenu.classList.toggle('active');
+        });
 
-    mySidebar.style.display = 'none'; // Hide sidebar on load
-    overlayBg.style.marginLeft = "0px"; // Reset overlay margin
-    sidebar(); // Set initial state
-  </script>
+        // Smooth scrolling avec offset pour la navbar
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    const offsetTop = target.offsetTop - 80;
+                    window.scrollTo({
+                        top: offsetTop,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // Navbar scroll effect
+        window.addEventListener('scroll', () => {
+            const navbar = document.getElementById('navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+
+        // Intersection Observer pour les animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -100px 0px'
+        };
+
+        const fadeInObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('fade-in');
+                }
+            });
+        }, observerOptions);
+
+        // Observer les éléments à animer
+        document.querySelectorAll('.project-card, .skill-item, .contact-item').forEach(el => {
+            fadeInObserver.observe(el);
+        });
+
+        // Parallax effect pour les formes flottantes
+        window.addEventListener('scroll', () => {
+            const scrollY = window.scrollY;
+            const shapes = document.querySelectorAll('.shape');
+            
+            shapes.forEach((shape, index) => {
+                const speed = 0.5 + (index * 0.2);
+                const yPos = -(scrollY * speed);
+                const currentTransform = shape.style.transform;
+                
+                // Conserver la transformation de la souris si elle existe
+                if (currentTransform && currentTransform.includes('translate')) {
+                    const translateMatch = currentTransform.match(/translate\(([^)]+)\)/);
+                    if (translateMatch) {
+                        const [x, y] = translateMatch[1].split(',').map(s => s.trim());
+                        shape.style.transform = `translate(${x}, ${y}) translateY(${yPos}px)`;
+                    }
+                } else {
+                    shape.style.transform = `translateY(${yPos}px)`;
+                }
+            });
+        });
+    </script>
 </body>
 </html>
