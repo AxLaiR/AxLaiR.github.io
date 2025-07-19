@@ -239,9 +239,36 @@ nav.scrolled {
     width: 250px;
     height: 250px;
     bottom: 10%;
-    right: 40%;
+    right: 10%;
     background: linear-gradient(135deg, var(--primary-light), var(--primary));
     animation-delay: -3s;
+}
+
+.shape-6 {
+    width: 180px;
+    height: 180px;
+    top: 11%;
+    left: 66%;
+    background: linear-gradient(135deg, var(--accent), var(--secondary));
+    animation-delay: -5s;
+}
+
+.shape-7 {
+    width: 220px;
+    height: 220px;
+    bottom: 15%;
+    left: 15%;
+    background: linear-gradient(135deg, var(--gray-dark), var(--gray-medium));
+    animation-delay: -6s;
+}
+
+.shape-8 {
+    width: 100px;
+    height: 100px;
+    bottom: 10%;
+    left: 15%;
+    background: linear-gradient(135deg, var(--accent), var(--primary-dark));
+    animation-delay: -7s;
 }
 
 @keyframes float {
@@ -591,6 +618,12 @@ nav.scrolled {
     background: url('images/MyHead.jpg') center/cover no-repeat;
     position: relative;
     z-index: 2;
+}
+
+.image-container:hover .rotating-border {
+    animation-direction: reverse;
+    animation-duration: 2s;
+
 }
 
 @keyframes rotate {
